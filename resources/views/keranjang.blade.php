@@ -13,43 +13,52 @@
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <title>Keranjang</title>
 </head>
 
-<body style="height: 1000px">
-
+<body >
     @include('parsial.header')
-
-    <div class="container my-5">
-
+    <div class="container my-5 pb-5">
         <div class="row">
             <!-- /.col-lg-3 -->
             <div class="col-lg-12">
                 <div class="table-responsive">
                     <table class="table table-borderless" style="width:100%">
-                        <thead>
+                        <thead class="bg-info">
                             <tr class="text-center">
                                 <th class="text-left" style="width: 200px" scope="col">Barang</th>
-                                <th style="width: 50px"  scope="col">Harga</th>
+                                <th style="width: 50px" scope="col">Harga</th>
                                 <th style="width: 120px" scope="col">Jumlah</th>
-                                <th style="width: 20px"  scope="col">Total</th>
+                                <th style="width: 20px" scope="col">Total</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr class="text-center">
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
+                        <tbody><hr>
+                            @foreach ($psn as $qwe)
+                                @if(Auth::user()->id == $qwe->id_user && $qwe->status == "belum" )
+                                    @foreach ($dn as $item)
+                                    <tr class="text-center">
+                                        <th class="text-left" scope="row">{{  $item->nama_makanan }}</th>
+                                        <td>{{  $item->harga_makanan }}</td>
+                                        <td>{{  $item->jumlah }}</td>
+                                        <td>{{  $item->subtotal }}</td>
+                                    </tr>
+                                    @endforeach
+                                @endif
+                            @endforeach
                         </tbody>
-                    </table>
+                    </table><hr>
+                    <button type="button" name="" id="" class="btn btn-primary float-right mr-5 " btn-lg btn-block">Bayar</button>
                 </div>
             </div>
             <!-- /.col-lg-9 -->
         </div>
         <!-- /.row -->
+    </div>
 
+    <div class="container-fluid py-5" style="background-color:#f1f1f1">
+        <div class="row text-center">
+            <div class="col-12"> &copy; DMARE</div>
+        </div>
     </div>
 
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

@@ -13,23 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 
 Route::resource('/admin', 'AdminController');
 
+Route::resource('/order', 'OrderController');
+
+
+
+
+Route::get('index/order', 'OrderController@index')->name('order.index');
+
+Route::get('/order', 'OrderController@cart')->name('order');
+
 Route::get('/admin.index', 'AdminController@index')->name('admin.index');
 
-Route::get('/index', 'MenuController@index')->name('tbl_makanan.index');
 
-
-Route::get('/keranjang', 'MenuController@cart')->name('cart');
-
-// Route::get('/admin/index', 'MenuController@admin');
-
-// Route::resource('/admin', 'AdminController');
 
 Route::get('/register', 'AuthController@getRegister')->name('register')->middleware('guest');
 Route::post('/register', 'AuthController@postRegister')->middleware('guest');

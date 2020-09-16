@@ -38,8 +38,6 @@
             <td class="text-center"><img width="150px" src="{{ asset('storage/' . $item->gambar_makanan) }}"></td>
             <td class="text-center">
                 <form action="{{ route('admin.destroy',$item->id_makanan) }}" method="POST">
-   
-                    <a class="btn btn-info" href="{{ route('admin.show',$item->id_makanan) }}">Show</a>
     
                     <a class="btn btn-primary" href="{{ route('admin.edit',$item->id_makanan) }}">Edit</a>
    

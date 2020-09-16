@@ -13,7 +13,13 @@
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <style>
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+    </style>
+    <title>Dashboard</title>
 </head>
 
 <body style="height: 1000px">
@@ -27,7 +33,7 @@
         <div class="row">
 
             <div class="col-lg-3">
-                <h1 class="my-4">Shop Name</h1>
+                <h2 class="my-4">Shop Dreamapps</h2>
                 <div class="list-group">
                     <a href="#" class="list-group-item">Category 1</a>
                     <a href="#" class="list-group-item">Category 2</a>
@@ -42,6 +48,14 @@
         </div>
         <!-- /.row -->
 
+    </div>
+
+
+
+    <div class="container-fluid py-5" style="background-color:#f1f1f1">
+        <div class="row text-center">
+            <div class="col-12"> &copy; DMARE</div>
+        </div>
     </div>
 
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

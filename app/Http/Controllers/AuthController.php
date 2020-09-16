@@ -18,7 +18,7 @@ class AuthController extends Controller
         if (!Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             return redirect()->back();
         } else if (auth()->user()->level == 'user') {
-            return redirect()->route('tbl_makanan.index');
+            return redirect()->route('order.index');
         } else if (auth()->user()->level == 'admin') {
             return redirect()->route('admin.index');
         }
@@ -49,6 +49,6 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect()->route('tbl_makanan.index');
+        return redirect()->route('order.index');
     }
 }

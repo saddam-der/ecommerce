@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light  relative-top">
+<nav class="navbar navbar-expand-lg navbar-light  relative-top" >
     <div class="container">
-        <a class="navbar-brand" href="#">Dreamapps</a>
+        <a class="navbar-brand" href="{{ route('order.index') }}">Dreamapps</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -12,7 +12,7 @@
                     <a class="nav-link" href="#"><i class="fa fa-user"></i> Account</a>
                 </li>
                 <li class="nav-item  mr-4">
-                    <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i> Cart</a>
+                    <a class="nav-link" href="{{ route('order') }}"><i class="fa fa-shopping-cart"></i> Cart</a>
                 </li>                
                 <li class="nav-item">
                   <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-sign-in"></i> Logout</a>

@@ -86,16 +86,12 @@
                                         </div>
                                         <hr>
                                         <button type="submit" name="" id="" class="btn btn-primary btn-user btn-block"
-                                            btn-lg btn-block">Daftar</button>
-
+                                            btn-lg btn-block">Daftar</button><hr>
                                     </form>
 
-                                    {{-- <div class="text-center">
-                                    <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                </div>
-                                <div class="text-center">
-                                    <a class="small" href="register.html">Create an Account!</a>
-                                </div> --}}
+                                    <div class="text-center mt-2">
+                                        <a class="small" href="{{route('login')}}">Sudah Punya Akun? Masuk</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
